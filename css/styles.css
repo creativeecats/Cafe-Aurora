@@ -1,0 +1,295 @@
+/*Reset CSS*/
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*Rules*/
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+
+main{
+  flex-grow: 1;
+}
+
+/*Header*/
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #faf8f5;
+}
+
+.logo a, .nav-links a{
+  text-decoration: none;
+  color: #442f2a;
+}
+
+.nav-links{
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+.nav-links a:hover{
+  color: #070d0d;
+}
+
+.nav-links a:active{
+  color: #4d403a;
+}
+
+/*Hero section*/
+.hero-section{
+  display: flex;
+  background-color: #dfdacf;
+  height: 60vh;
+}
+
+.hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.hero-image{
+  flex-grow: 2;
+}
+
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem; 
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.hero-content p{
+  max-width: 500px;
+}
+
+.hero-content  h2{
+  font-size: 2rem;
+}
+
+.hero-content p{
+  font-size: 1.25rem;
+}
+
+.hero-content button{
+  border-radius: 10px;
+  background-color: #faf8f5;
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+.hero-content button:hover{
+  background-color:#4d403a;
+  color: #fff7ec;;
+}
+
+.about-us-section{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  background-color: #faf8f5;
+}
+
+
+.about-us-section p{
+  justify-content: center;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/*Products section*/
+.products-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #dfdacf;
+}
+
+.products-section h2{
+  align-self: center;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.product{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background-color: #faf8f5;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.product-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  
+}
+
+.product:hover{
+  background-color:#4d403a;
+  color: #fff7ec;;
+}
+
+
+.product-image{
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*Choose section*/
+.choose-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #faf8f5;
+}
+
+.reason{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.reason p{
+  max-width: 300px;
+}
+
+.choose-reasons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/*Contact Section*/
+.contact-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #dfdacf;
+}
+
+.information-content{
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ gap: 3rem;
+ padding: 1rem;
+}
+.information{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer{
+  padding: 1rem;
+  background-color: #faf8f5;
+  text-align: end;
+}
